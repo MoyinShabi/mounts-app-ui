@@ -47,3 +47,17 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
+
+// Landing page which the SplashPage navigates to
+class MountsApp extends StatelessWidget {
+  const MountsApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('Welcome to Mounts of the World!'),
+      ),
+    );
+  }
+}
