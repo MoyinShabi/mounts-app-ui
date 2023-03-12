@@ -49,7 +49,9 @@ class AppSearch extends StatelessWidget {
                 height: 50,
                 margin: const EdgeInsets.only(left: 10),
                 decoration: BoxDecoration(
-                    color: mainColor, borderRadius: BorderRadius.circular(10)),
+                  color: mainColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: const Icon(
                   Icons.tune_rounded,
                   color: Colors.white,

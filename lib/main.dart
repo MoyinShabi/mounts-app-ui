@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mounts_of_the_world_app_ui/widgets/app_header.dart';
 import 'package:mounts_of_the_world_app_ui/widgets/app_search.dart';
+import 'package:mounts_of_the_world_app_ui/widgets/mounts_listview.dart';
 
 const Color mainColor = Color(0xFFFF5656);
 
@@ -101,6 +102,7 @@ class LandingPage extends StatelessWidget {
           children: const [
             AppHeader(),
             AppSearch(),
+            MountsListView(),
           ],
         ));
   }
