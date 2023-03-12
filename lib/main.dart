@@ -15,6 +15,15 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      const Duration(seconds: 2),
+      () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const MountsApp(),
+        ),
+      ),
+    );
+
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
