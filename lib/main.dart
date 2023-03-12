@@ -6,7 +6,8 @@ const Color mainColor = Color(0xFFFF5656);
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: SplashPage(),
+    // home: SplashPage(),
+    home: LandingPage(),
   ));
 }
 
@@ -19,7 +20,7 @@ class SplashPage extends StatelessWidget {
       const Duration(seconds: 2),
       () => Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => const MountsApp(),
+          builder: (context) => const LandingPage(),
         ),
       ),
     );
@@ -58,15 +59,44 @@ class SplashPage extends StatelessWidget {
 }
 
 // Landing page which the SplashPage navigates to
-class MountsApp extends StatelessWidget {
-  const MountsApp({super.key});
+class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Welcome to Mounts of the World!'),
-      ),
-    );
+    return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            // statusBarColor: Colors.transparent,
+            statusBarIconBrightness:
+                Brightness.dark, // For Android (dark icons)
+            // statusBarBrightness: Brightness.light, // For iOS (light icons)
+          ),
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          iconTheme: const IconThemeData(color: mainColor),
+          title: const Icon(
+            Icons.terrain_rounded,
+            size: 40,
+          ),
+          centerTitle: true,
+        ),
+        drawer: Drawer(
+          child: Container(
+            padding: const EdgeInsets.all(30),
+            color: mainColor,
+            alignment: Alignment.bottomLeft,
+            child: const Icon(
+              Icons.terrain_rounded,
+              color: Colors.white,
+              size: 80,
+            ),
+          ),
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [],
+        ));
   }
 }
