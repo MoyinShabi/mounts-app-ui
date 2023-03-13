@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:mounts_of_the_world_app_ui/models/category_model.dart';
 import 'package:mounts_of_the_world_app_ui/models/mount_model.dart';
 
 const mountItems = [
@@ -36,4 +38,11 @@ const mountItems = [
       description:
           'Popocatépetl is an active stratovolcano located in the states of Puebla, Morelos, and Mexico in central Mexico. It lies in the eastern half of the Trans-Mexican volcanic belt. At 5,426 m it is the second highest peak in Mexico, after Citlaltépetl at 5,636 m.',
       location: 'Mexico')
+];
+
+const categories = [
+  CategoryModel(name: 'Mountain', icon: Icons.terrain),
+  CategoryModel(name: 'Forest', icon: Icons.park),
+  CategoryModel(name: 'Beach', icon: Icons.beach_access),
+  CategoryModel(name: 'Hiking', icon: Icons.directions_walk)
 ];

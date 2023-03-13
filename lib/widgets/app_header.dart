@@ -7,7 +7,7 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 30, top: 30, right: 30),
+      padding: const EdgeInsets.only(left: 20, top: 30),
       child: Row(
         children: [
           ClipOval(

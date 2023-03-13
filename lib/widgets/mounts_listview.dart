@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mounts_of_the_world_app_ui/constants/mounts_dummy_data.dart';
+import 'package:mounts_of_the_world_app_ui/constants/dummy_data.dart';
 import 'package:mounts_of_the_world_app_ui/models/mount_model.dart';
 
 class MountsListView extends StatelessWidget {
@@ -11,14 +11,14 @@ class MountsListView extends StatelessWidget {
         child: SizedBox(
       height: 150,
       child: ListView.builder(
-        // physics: ,
         scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
         itemCount: mountItems.length,
         itemBuilder: (context, index) {
           MountModel currentMount = mountItems[index];
           return Container(
             width: 150,
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.only(left: 20 /* , bottom: 20 */),
             padding: const EdgeInsets.all(10),
             alignment: Alignment.bottomLeft,
             decoration: BoxDecoration(
